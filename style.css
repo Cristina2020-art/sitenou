@@ -1,0 +1,156 @@
+/* Resetare stiluri implicite */
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #6edad1;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header, footer {
+    background-color: #10a2db;
+    color: #3d26be;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+header h1, footer p {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #151fa7;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+section {
+    padding: 2rem;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #3d26be;
+}
+
+.curs h3 {
+    font-size: 1.5rem;
+    color:#2980b9;
+}
+
+.curs p {
+    font-size: 1.1rem;
+}
+
+.imagini {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(900px, 1fr)); /* Ajustăm dimensiunea minimă și maximă a imaginilor */
+    grid-gap: 5px; /* Spațiu între imaginile din grid */
+}
+
+.imagini img {
+    width: 100%; /* Facem imaginile să ocupe întreaga lățime a containerului lor */
+    height: auto; /* Menținem proporțiile imaginilor pentru a evita distorsiunile */
+    padding: 10px; /* Spațiu în jurul imaginilor */
+    display: block;
+    box-sizing: border-box; /* Asigurăm că padding-ul nu va crește dimensiunea totală a imaginii */
+}
+
+.imagine-rotunda {
+    border-radius: 50%;
+}
+
+.poze {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-gap: 0.5px; /* Spațiu între imaginile din grid */
+}
+
+.poze img {
+    max-width: 100%; /* Poza nu va depăși lățimea containerului */
+    width: 700px;
+    height: auto; /* Înălțimea va fi ajustată automat proporțional cu lățimea */
+    display: block; /* Asigură că imaginea nu are margini albe pe lângă ea */
+    padding: 15px;
+}
+
+#contact-form {
+    max-width: 400px;
+    margin: 0;
+}
+
+#contact-form div {
+    margin-bottom: 20px;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #242323;
+    border-radius: 5px;
+}
+
+#contact-form textarea {
+    resize: vertical;
+}
+
+#contact-form button {
+    padding: 10px 20px;
+    background-color: rgb(40, 143, 168);
+    color: #140e70;
+    border: none;
+    border-radius: 5px;
+   font-weight: bold;
+    cursor: pointer;
+}
+
+#contact-form button :hover{
+    background-color: #2980b9;
+}
+
+#rezultat {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #6edad1;
+    border-radius: 5px;
+}
+
+footer p {
+    text-align: center;
+}
+
+/* Stilizare pentru ecrane mai mici */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Stilizare pentru ecrane mai mari */
+@media (min-width: 1024px) {
+    .imagini {
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /* Ajustăm dimensiunea minimă a imaginilor */
+    }
+}
